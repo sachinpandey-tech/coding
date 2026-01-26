@@ -1,0 +1,15 @@
+#include <stdio.h>
+long int factorial(long int);
+void main() {
+	long int n;
+	printf("Enter an integer : ");
+	scanf( "%ld",&n); // Fill the code in scanf() function
+	printf("Factorial of %ld is : %ld\n",n, factorial(n)); // Complete the statement
+}
+long int factorial(long int n) {
+	if ( n == 0) { // Fill the condition part
+		return 1 ; // Complete the statement
+	} else {
+		return n*factorial(n-1); // Complete the statement
+	}
+}

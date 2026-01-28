@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main(){
+	int a[10],n,i,larg,seclarg;
+	printf("Enter how many values you want to read : ");
+	scanf("%d",&n);
+
+	for(i = 0;i < n;i++){
+		printf("Enter the value of a[%d] : ",i);
+		scanf("%d",&a[i]);
+	}
+	larg = seclarg = -99999;
+	for(i = 0; i < n;i++){
+		if(a[i] > larg){
+			seclarg = larg;
+		larg = a[i];
+		}
+		else if(a[i] < larg && a[i] > seclarg)
+			seclarg = a[i];
+	}
+	printf("The largest element of the array = %d\n",larg);
+	printf("The second largest element of the array = %d\n",seclarg);
+}

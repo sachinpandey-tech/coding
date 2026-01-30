@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+void palidrom(int n){
+    int digit , rev = 0;
+    int temp = n;
+    while(n != 0){
+        digit = n % 10;
+        rev = rev*10 + digit;
+        n = n / 10;
+    }
+    if(temp != rev){
+        printf("Not a palidrom");
+    }
+    else{
+        printf("palidrom");
+    }
+}
+
+int main(){
+    int a;
+    scanf("%d",&a);
+
+    palidrom(a);
+    return 0;
+}

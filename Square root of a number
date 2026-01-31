@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+
+int square(int x){
+    float n;
+    n = sqrt(x);
+    printf("%f",ceil(n));
+    return n;
+}
+
+int main(){
+    int n;
+    printf("Enter the number : ");
+    scanf("%d",&n);
+
+    square(n);
+}
